@@ -1,0 +1,27 @@
+[
+  {
+    "name": "${application}",
+    "cpu": 512,
+    "essential": true,
+    "image": "containers.mheducation.com/connect-jenkins/hello-world-busybox",
+    "memory": null,
+    "memoryReservation": 512,
+    "portMappings": [
+      {
+        "hostPort": 0,
+        "protocol": "tcp",
+        "containerPort": 7016
+      } ],
+    "dnsServers": [
+      "172.17.0.1",
+      "169.254.169.253"
+    ],
+    "ulimits": [
+      {
+        "softLimit": 65536,
+        "hardLimit": 65536,
+        "name": "nofile"
+      }
+    ]
+  }
+]
